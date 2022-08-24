@@ -1,0 +1,55 @@
+<form [formGroup]="createEmployee" (ngSubmit)="onSubmit($event)">
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Employee Name</mat-label>
+      <input
+        matInput
+        formControlName="employeeName"
+        placeholder="Employee Name"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Designation</mat-label>
+      <input matInput formControlName="designation" placeholder="Designation" />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Phone Number</mat-label>
+      <input
+        matInput
+        placeholder="Phone Number"
+        formControlName="phoneNumber"
+      />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <input matInput placeholder="Gender" formControlName="gender" />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Salary</mat-label>
+      <input matInput placeholder="salary" formControlName="salary" />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Skills</mat-label>
+      <mat-select formControlName="skills" multiple>
+        <mat-option *ngFor="let skill of skills1" [value]="skill.skillId">{{
+          skill.skillName | titlecase
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <button mat-raised-button type="submit">Submit</button>
+</form>

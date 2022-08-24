@@ -1,0 +1,18 @@
+<div class="header">
+  <span class="input">
+    <mat-form-field appearance="outline">
+      <mat-label>Search</mat-label>
+      <input matInput (keyup)="emptySearch(input.value)" class="input" #input />
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="search(input.value)">
+      Search
+    </button>
+    <button mat-raised-button color="primary" (click)="openModal()">
+      Create New Employee
+    </button>
+  </span>
+
+  <div>
+    <button (click)="logout()" color="primary" mat-raised-button>Logout</button>
+  </div>
+</div>

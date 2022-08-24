@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input {
+  width: 50%;
+}
+mat-form-field {
+  flex-grow: 1;
+  margin-right: 15px;
+  width: 50%;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  margin-left: 5px;
+}
